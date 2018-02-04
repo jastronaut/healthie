@@ -2,7 +2,7 @@ from django import forms
 from django.db import models
 
 class CalculateCaloriesForm(forms.Form):
-	THE_ONLY_GENDERS = (
+	GENDERS = (
 		("m", "Male"),
 		("f", "Female")
 	)
@@ -31,9 +31,9 @@ class CalculateCaloriesForm(forms.Form):
 	# age = forms.IntegerField(label="Age (yrs)", required=True, min_value=12)
 	# activitylevel = forms.ChoiceField(label="Activity Level", required=True, choices=ACTIVITY_LEVEL)
 
-	gender = forms.ChoiceField(label="Gender (M/F)", choices=THE_ONLY_GENDERS)
-	weight = forms.FloatField(label="Weight (lbs)", min_value=1)
-	height = forms.IntegerField(label="Height (in)", min_value=12)
-	age = forms.IntegerField(label="Age (yrs)", min_value=12)
-	activitylevel = forms.ChoiceField(label="Activity Level", choices=ACTIVITY_LEVEL)
-	dietRestrictions = forms.MultipleChoiceField(label="Dietary Restrictions", choices=RESTRICTIONS, widget=forms.CheckboxSelectMultiple())
+	gender = forms.ChoiceField(label="Gender (M/F)", choices=GENDERS, initial="M")
+	weight = forms.FloatField(label="Weight (lbs)", min_value=1, initial=140)
+	height = forms.IntegerField(label="Height (in)", min_value=12, initial=68)
+	age = forms.IntegerField(label="Age (yrs)", min_value=12, initial=19)
+	activitylevel = forms.ChoiceField(label="Activity Level", choices=ACTIVITY_LEVEL, initial=1)
+	dietRestrictions = forms.MultipleChoiceField(label="Dietary Restrictions", choices=RESTRICTIONS, widget=forms.CheckboxSelectMultiple(), required=False)
