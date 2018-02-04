@@ -33,13 +33,13 @@ class Person(models.Model):
 	def set_printableActivityLevel(self):
 		if self.activitylevel == 1:
 			self.printableActivityLevel = "sedentary"
-		elif self.activitylevel == 2:
+		if self.activitylevel == 2:
 			self.printableActivityLevel = "lightly active"
-		elif self.activitylevel == 3:
+		if self.activitylevel == 3:
 			self.printableActivityLevel = "moderately active"
-		elif self.activitylevel == 4:
+		if self.activitylevel == 4:
 			self.printableActivityLevel = "heavily active"
-		else:
+		if self.activitylevel == 5:
 			self.printableActivityLevel = "athlete"
 
 	# def set_printableHeight(self):
