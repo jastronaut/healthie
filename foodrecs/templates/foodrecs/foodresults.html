@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block bigheading %}Your Meal Plan{% endblock %}
+
+{% block maincontent %}
+<div class="row">
+	<div class="inside" style="flex-basis:65%;">
+	<div id="meal-header">Breakfast</div>
+	<a href="{{ breakfast.recipe_url }}"><div class="recipe-header">{{ breakfast.name }}</div></a>
+	<div id="indented">
+		<b>Calories</b>: {{ breakfast.calories }}<br>
+	{{ breakfast.protein }} g <b>Protein</b> / {{ breakfast.carbohydrates }} g <b>Carbs</b> / {{ breakfast.fat }} g <b>Fat</b><br>
+	<img src="{{ breakfast.image }}" style="max-height: 250px">
+	</div>
+	
+</div>
+	<div class="inside" style="flex:1">
+		<span class="smalltxt"> {{ person.printableGender }} / {{ person.age }} years / {{ person.weight }} lbs / {{ person.height }} in / {{ person.printableActivityLevel }}</span>
+		<div class="bignumber">{{ totalCalories }}</div>
+		<div class="subnumber">Reccomended calories</div>
+		<div class="bignumber">{{ mealCalories }}</div>
+		<div class="subnumber">Calories for this meal plan</div>
+
+		<!-- <div class="button" onClick="window.location.reload()">Shuffle Results!</div> -->
+		<form action="" method="GET">
+			<input type="submit" value="Shuffle Meals!">
+		</form>
+	</div>
+</div>
+
+<div class="row">
+	<div class="inside" style="flex-basis:65%;">
+	<div id="meal-header">Lunch</div>
+	<a href="{{ breakfast.recipe_url }}"><div class="recipe-header">{{ lunch.name }}</div></a>
+	<div id="indented">
+		<b>Calories</b>: {{ lunch.calories }}<br>
+	{{ lunch.protein }} g <b>Protein</b> / {{ lunch.carbohydrates }} g <b>Carbs</b> / {{ lunch.fat }} g <b>Fat</b><br>
+	<img src="{{ lunch.image }}" style="max-height: 250px">
+	</div>
+
+</div>
+<div class="inside" style="flex:1"></div>
+</div>
+<div class="row">
+	<div class="inside" style="flex-basis:65%;">
+	<div id="meal-header">Dinner</div>
+	<a href="{{ breakfast.recipe_url }}"><div class="recipe-header">{{ dinner.name }}</div></a>
+	<div id="indented">
+		<b>Calories</b>: {{ dinner.calories }}<br>
+	{{ dinner.protein }} g <b>Protein</b> / {{ dinner.carbohydrates }} g <b>Carbs</b> / {{ dinner.fat }} g <b>Fat</b><br>
+	<img src="{{ dinner.image }}" style="max-height: 250px">
+	</div>
+	
+
+</div>
+<div class="inside" style="flex:1"></div>
+</div>
+<p>{{ calories }}</p>
+
+{% endblock %}

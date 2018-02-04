@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>index</title>
+	{% load static %}
+	<link rel="stylesheet" href="style.css">
+	<!--<style type="text/css">
+		* {
+			font-family: sans-serif;
+		}
+		#wrapper {
+			padding: 2% 3% 2% 3%;
+		}
+		.page-header {
+			z-index: 2;
+			background-color: #88aaaa;
+			padding: 1% 1%;
+			color: #fff;
+		}
+	</style>-->
+	<title>Meal Planner</title>
+</head>
+<body>
+<div id="wrapper">
+<div class="page-header">
+	<h1>Wow Please Information</h1>
+</div>
+<form action="" method="GET">
+	{% csrf_token %}
+	<table>
+	{% for field in form %}
+	<tr><td style="text-align: right">{{ field.label_tag }}</td><td>{{ field }}</td></tr>
+	{% endfor %}
+	<tr><td></td><td><input type="submit" value="Show Meals!"></td></tr>
+	</table>
+<br>
+<!--<img src="https://www.reaconverter.com/howto/wp-content/uploads/2015/10/banana.gif">-->
+</form>
+</div>
+</body>
+</html>
