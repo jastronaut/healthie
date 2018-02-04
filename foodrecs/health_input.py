@@ -68,15 +68,16 @@ def shuffle_meals(saved_json, calorie_goal, meals = ["breakfast", "lunch", "dinn
     return day_list
 
 
-def generate_meals(calories: int):
+def generate_meals(calories: int, restrictions: list):
     for meal in ["breakfast", "lunch", "dinner"]:
         url = create_url() + "&q=" + meal
+        add_diet_restrictions(url, restrictions)
         # print(url)
         # print("BEFORE JSON")
         json = get_result(url)
         # print("AFTER JSON")
         json_saved[meal] = json
-
+    
     return shuffle_meals(json_saved,calories)
 
 
