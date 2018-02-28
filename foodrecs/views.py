@@ -29,18 +29,20 @@ def enterinfo(request):
         form = CalculateCaloriesForm(request.GET)
         if form.is_valid():
             p.age = request.GET.get("age")
-            print("age is", request.GET.get("age"))
+            #print("age is", request.GET.get("age"))
             p.weight = request.GET.get("weight")
             p.height = request.GET.get("height")
             p.activitylevel = request.GET.get("activitylevel")
             p.gender = request.GET.get("gender")
             # p.restrictions = form.cleaned_data["dietRestrictions"]
+
             p.restrictions = request.GET.get("dietRestrictions")
+            print("RESTRICTIONS:", p.restrictions)
             p.update_info()
             return foodresults(request, p)
             # return HttpResponseRedirect('')
             # return render(request, 'foodrecs/enterinfo.html', {'form': form, 'PageTitle': 'Enter Your Info', 'entered': True})
-        print("\terrors: ", form.errors)
+        print("\t\t\t\tERRORS: ", form.errors)
     # print("Input not valid.")
     form = CalculateCaloriesForm()
     return render(request, 'foodrecs/enterinfo.html', {'form': form, 'PageTitle': 'Dang it!'})

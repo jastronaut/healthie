@@ -15,17 +15,19 @@
 	
 </div>
 	<div class="inside" style="flex:1">
-		<span class="smalltxt"> {{ person.printableGender }} / {{ person.age }} years / {{ person.weight }} lbs / {{ person.height }} in / {{ person.printableActivityLevel }}</span>
+	<div id="meta-info">
+		<span class="smalltxt" style="text-align:left;"> {{ person.printableGender }} / {{ person.age }} years / {{ person.weight }} lbs / {{ person.height }} in / {{ person.printableActivityLevel }}</span>
 		<div class="bignumber">{{ totalCalories }}</div>
 		<div class="subnumber">Reccomended calories</div>
 		<div class="bignumber">{{ mealCalories }}</div>
 		<div class="subnumber">Calories for this meal plan</div>
 
 		<!-- <div class="button" onClick="window.location.reload()">Shuffle Results!</div> -->
-		<form action="" method="GET">
-			<input type="submit" value="Shuffle Meals!">
-		</form>
+		<!-- <form action="" method="GET"> -->
+			<!-- <input type="submit" value="Shuffle Meals! - (In progress!)" name="shuffleMeals"> -->
+		<!-- </form> -->
 	</div>
+</div>
 </div>
 
 <div class="row">
