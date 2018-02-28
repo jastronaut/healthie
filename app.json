@@ -1,0 +1,14 @@
+{
+  "name": "Healthie",
+  "description": "Tool made with Python to calculate a sample meal plan based upon your calorie needs.",
+  "image": "heroku/python",
+  "repository": "https://github.com/jastronaut/healthie",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "secret"
+    }
+  },
+}
