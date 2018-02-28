@@ -5,8 +5,8 @@ from foodrecs.recipe import *
 import random
 import requests
 
-APP_ID = "bb58ba43"
-API_KEY = "59fe391841c0ab2b0d1804dfc85699db"
+APP_ID = ""
+API_KEY = ""
 URL_BASE = "https://api.edamam.com/search?"
 
 
