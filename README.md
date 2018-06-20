@@ -1,5 +1,9 @@
 # healthie
 
+### heroku branch
+
+this branch is compatible with heroku and implements healthie as a django project *and* django app. see master brach for a standalone django app.
+
 HackUCI 2018 project by @jastronaut and @billycastelli.
 
 takes in a person's height, weight, age, activity level, and gender and suggests a meal plan for the day.
