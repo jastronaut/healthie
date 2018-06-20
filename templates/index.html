@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block bigheading %}Enter Your Stats{% endblock %}
+
+{% block maincontent %}
+<form action="" method="GET">
+	{% csrf_token %}
+	<table>
+	{% for field in form %}
+	<tr><td style="text-align: right">{{ field.label_tag }}</td><td>{{ field }}</td></tr>
+	{% endfor %}
+	<tr><td></td><td><input type="submit" value="Show Meals!"></td></tr>
+	</table>
+<br>
+<!--<img src="https://www.reaconverter.com/howto/wp-content/uploads/2015/10/banana.gif">-->
+</form>
+{% endblock %}

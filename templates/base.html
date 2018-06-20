@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<meta charset="utf-8">
+	<style type="text/css">
+		* {
+			font-family: sans-serif;
+		}
+		#wrapper {
+			padding-left: 5vw;
+			padding-right: 5vw;
+			padding-top: calc(105px + 3vh);
+		}
+		.page-header {
+			z-index: 3;
+			background-color: #88aaaa;
+			margin-left: 30%;
+			padding: 1% 0%;
+			top: 0;
+			right: 0;
+			color: #fff;
+			width: 100%;
+			position:fixed !important;
+		}
+		.inside-box {
+			overflow: hidden;
+		}
+		#meal-header {
+			top: 0px;
+			left:0px;
+			margin: 1% 1% 0% 1%;
+			color: #88aaaa;
+			font-weight: bold;
+			font-size: 180%;
+			padding: 0.5% 0.5% 0% 0.5%;
+		}
+
+		#meta-info {
+			z-index: 3;
+			top: calc(105px + 3vh);
+			right: 5vw;
+			position:fixed !important;
+		}
+		.recipe-header {
+			top: 0px;
+			left:0px;
+			margin: 1% 1%;
+			color: #88aaaa;
+			
+			font-size: 140%;
+			padding: 0.25% 0.25% 0% 0.25%;
+		}
+
+		.recipe-header a {
+			color: #88aaaa;
+		}
+		.recipe-header a:hover {
+			color: #000;
+			transition: all 0.1s ease;
+		}
+		#indented {
+			margin: 1% 4%;
+			padding: .5% 3%;
+		}
+		.row {
+			display: flex;
+		}
+		.bignumber {
+			font-size: 220%;
+			font-weight: bold;
+			text-align: right;
+		}
+		.subnumber {
+			font-style: italic;
+			text-align: right;
+		}
+		.smalltxt {
+			font-style: italic;
+			color: grey;
+			text-size: 50%;
+		}
+		a {
+			text-decoration: none;
+		}
+		a .button {
+			color: #fff;
+		}
+		.button {
+			padding: 0.5% 0.5%;
+			background-color: #88aaaa;
+			color: #fff;
+			border: 2px solid #fff;
+		}
+		#submit {
+			background-color: #88aaaa;
+			color: #fff;
+			border-radius: 5px 5px;
+		}
+	</style>
+	{% block title %}<title>Meal Planner</title>{% endblock %}
+</head>
+<body>
+<div class="page-header">
+	<h1>{% block bigheading %}Meal Planner{% endblock %}</h1>
+</div>
+<div id="wrapper">
+
+{% block maincontent %}
+
+{% endblock %}
+</div>
+</body>
+</html>
